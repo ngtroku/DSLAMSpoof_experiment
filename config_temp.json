@@ -26,7 +26,12 @@
         "spoofing_range":80
     },
     "slam":{
-        "algorithm":"fast_lio",
-        "save_dir":"/home/rokuto/ICRA_IROS_transfer/estimated_traj"
+        "algorithm":"kiss_icp",
+        "save_dir":"/home/rokuto/ICRA_IROS_transfer/estimated_traj/"
+    },
+    "evaluation":{
+        "ground_truth":"/home/rokuto/ICRA_IROS_transfer/benign/kiss_benign_tuhh_09.txt",
+        "estimated":"/home/rokuto/ICRA_IROS_transfer/estimated_traj/temp.txt",
+        "success_threshold":3
     }
 }

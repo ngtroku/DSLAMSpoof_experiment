@@ -1,6 +1,6 @@
 import subprocess
 
-def run_slam(algorithm='kiss_icp', bag_path='', topic='/velodyne_points', save_dir='', rosbag_rate='2.0', visualize=False):
+def run_slam(algorithm='kiss_icp', bag_path='', topic='/velodyne_points', save_dir='', rosbag_rate='2.0', visualize=True):
     """
     Pythonの変数をroslaunchの引数として渡して実行する
     """
