@@ -24,5 +24,9 @@
         "injection_mode":"corner",
         "corner_rotation":0,
         "spoofing_range":80
+    },
+    "slam":{
+        "algorithm":"fast_lio",
+        "save_dir":"/home/rokuto/ICRA_IROS_transfer/estimated_traj"
     }
 }

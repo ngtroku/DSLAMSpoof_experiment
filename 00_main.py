@@ -11,9 +11,8 @@ import json
 # load external files
 import file_io
 import spoofer
+import slam
 import generate_rosbag
-import spoofing_sim
-import functions.bag2array
 
 def main():
     # load config
@@ -28,6 +27,13 @@ def main():
 
     # generate rosbag
     generate_rosbag.generate_main(spoofer_x, spoofer_y, loaded_dataframe)
+
+    # run slam
+    slam_algorithm = config['slam']['algorithm']
+    bag_path = config['rosbag']['output_bag']
+    lidar_topic = config['rosbag']['lidar_topic']
+    save_dir = config['slam']['save_dir']
+    slam.run_slam(algorithm=slam_algorithm, bag_path=bag_path, topic=lidar_topic, save_dir=save_dir)
 
     """
     for iter in range(int(config['main']['n_simulations'])):
