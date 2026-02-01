@@ -1,0 +1,28 @@
+{
+    "main": {
+        "reference_file":"./gt_tuhh_09.csv",
+        "n_simulations": 50
+    },
+    "rosbag":{
+        "spoofing_mode":"dynamic_injection",
+        "input_bag":"/home/rokuto/lidar_mirror_sim_old/tuhh_night_09_os1_64.bag",
+        "output_bag":"/home/rokuto/ICRA_IROS_transfer/sim.bag",
+        "lidar_topic":"/os_cloud_node/points",
+        "topic_length":48,
+        "topic_freq":10.0,
+        "imu_topic":"/os_cloud_node/imu",
+        "distance_threshold":30.0
+    },
+    "spoofer": {
+        "dist_from_traj":1.5
+    },
+    "spoofing_simulation":{
+        "minimum_distance":1.0,
+        "maximum_distance":50.0,
+        "time_cycle":5,
+        "static_wall_dist":30,
+        "injection_mode":"corner",
+        "corner_rotation":0,
+        "spoofing_range":80
+    }
+}
