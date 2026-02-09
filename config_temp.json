@@ -1,10 +1,10 @@
 {
     "main": {
-        "reference_file":"./gt_tuhh_09.csv",
+        "reference_file":"/home/rokuto/ICRA_IROS_transfer/gt_tuhh_09.csv",
         "n_simulations": 50
     },
     "rosbag":{
-        "spoofing_mode":"dynamic_injection",
+        "spoofing_mode":"static_injection",
         "input_bag":"/home/rokuto/lidar_mirror_sim_old/tuhh_night_09_os1_64.bag",
         "output_bag":"/home/rokuto/ICRA_IROS_transfer/sim.bag",
         "lidar_topic":"/os_cloud_node/points",
@@ -14,23 +14,23 @@
         "distance_threshold":30.0
     },
     "spoofer": {
-        "dist_from_traj":1.5
+        "dist_from_traj":3.0
     },
     "spoofing_simulation":{
         "minimum_distance":1.0,
         "maximum_distance":50.0,
         "time_cycle":5,
-        "static_wall_dist":30,
-        "injection_mode":"corner",
+        "static_wall_dist":50,
+        "injection_mode":"wall",
         "corner_rotation":0,
         "spoofing_range":80
     },
     "slam":{
         "algorithm":"kiss_icp",
+        "benign_save_dir":"/home/rokuto/ICRA_IROS_transfer/benign/",
         "save_dir":"/home/rokuto/ICRA_IROS_transfer/estimated_traj/"
     },
     "evaluation":{
-        "ground_truth":"/home/rokuto/ICRA_IROS_transfer/benign/kiss_benign_tuhh_09.txt",
         "estimated":"/home/rokuto/ICRA_IROS_transfer/estimated_traj/temp.txt",
         "success_threshold":3
     }
